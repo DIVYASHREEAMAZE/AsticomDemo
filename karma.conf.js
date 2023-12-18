@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/digifmsweb'),
+      dir: require('path').join(__dirname, './coverage/asticom'),
       subdir: '.',
       reporters: [
         { type: 'html' },

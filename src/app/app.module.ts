@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FmsinterceptorInterceptor } from './shared/fmsinterceptor.interceptor';
 import { HttpInterceptor } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClient, HttpClientModule, HttpClientXsrfModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -9,14 +8,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './Login/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-import { SidebarComponent } from './shared/sidebar/sidebar/sidebar.component';
-import { HeaderComponent } from './shared/header/header.component';
+import { SidebarComponent } from './Shared/sidebar/sidebar.component';
+import { FooterComponent } from './Shared/footer/footer.component';
+import { LoaderComponent } from './Shared/loader/loader.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SidebarComponent,
-    HeaderComponent
+    FooterComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -26,13 +27,7 @@ import { HeaderComponent } from './shared/header/header.component';
     DatePipe
   ],
   providers: [DatePipe,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: FmsinterceptorInterceptor,
-      multi: true,
-    },
     CookieService
-
   ],
   bootstrap: [AppComponent]
 })

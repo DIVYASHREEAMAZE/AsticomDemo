@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "digifmsweb": {
+    "asticom": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/digifmsweb",
+            "outputPath": "dist/asticom",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "digifmsweb:build:production"
+              "browserTarget": "asticom:build:production"
             },
             "development": {
-              "browserTarget": "digifmsweb:build:development"
+              "browserTarget": "asticom:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "digifmsweb:build"
+            "browserTarget": "asticom:build"
           }
         },
         "test": {
